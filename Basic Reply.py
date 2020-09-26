@@ -1,28 +1,26 @@
 # Work with Python 3.6
 import discord
 
-TOKEN = "NzU5MTE1NjIwNjc5NDE3ODc4.X24zgw.qgLaz77245m4cU9-1AhINVR099A"
-client.run(TOKEN)
+TOKEN = "NzU5MTE1NjIwNjc5NDE3ODc4.X24zgw.68I_TkhDqXBSE3Y_pvv99v-dYyU"
 
 client = discord.Client()
 prefix = "?"
 
+#Kyo id == <@352330857286991902>
 @client.event
 async def on_message(message):
-    # we do not want the bot to reply to itself
     if message.author == client.user:
         return
     if message.content.startswith("hello"):
         await message.channel.send("Hello")
+        if str(message.author) == "Xenon#3636":
+            await message.channel.send("Hello " + "<@528299195325480960>")
+        else:
+            await message.channel.send("Tofu")
+
 
 @client.event
 async def on_ready():
-    i = 0
-    while not client.is_closed:
-        await message.channel.send(client.get_channel("759472278261071934"), "I am running")
-        i+=1
-        if i >= 1:
-            break
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
