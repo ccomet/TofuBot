@@ -16,12 +16,7 @@ async def on_message(message):
 
 @client.event
 async def on_ready():
-    i = 0
-    while not client.is_closed:
-        await message.channel.send(client.get_channel("759472278261071934"), "I am running")
-        i += 1
-        if i >= 1:
-            break
+
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
