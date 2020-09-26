@@ -17,7 +17,6 @@ async def on_message(message):
         else:
             await message.channel.send("Tofu")
 
-
 @client.event
 async def on_ready():
     print('Logged in as')
