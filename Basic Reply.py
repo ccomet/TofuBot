@@ -1,8 +1,6 @@
 # Work with Python 3.6
 import discord
 
-TOKEN = "NzU5MTE1NjIwNjc5NDE3ODc4.X24zgw.68I_TkhDqXBSE3Y_pvv99v-dYyU"
-
 client = discord.Client()
 prefix = "?"
 
@@ -26,4 +24,4 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-client.run(TOKEN)
+client.run(os.environ['DISCORD_TOKEN'])
