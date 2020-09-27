@@ -7,7 +7,7 @@ client = discord.Client()
 prefix = "?"
 
 x = datetime.today()
-y = x.replace(day=x.day, hour=20, minute=20, second=30, microsecond=0)
+y = x.replace(day=x.day, hour=20, minute=21, second=30, microsecond=0)
 delta_t = y - x
 
 secs = delta_t.seconds + 1
@@ -30,3 +30,5 @@ async def on_message(message):
         await message.channel.send("Hello " + "<@352330857286991902>")
     else:
         await message.channel.send("Tofu")
+
+client.run(os.environ['DISCORD_TOKEN'])
