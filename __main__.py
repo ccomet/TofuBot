@@ -5,15 +5,7 @@ from datetime import datetime
 from threading import Timer
 
 client = discord.Client()
-prefix = "?"
-
-
-@client.event
-async def when_msg(message):
-    # we do not want the bot to reply to itself
-    if message.content.startswith(prefix + "hello"):
-        msg = 'Hello {0.author.mention}'.format(message)
-        await message.channel.send(msg)
+prefix = "tofu"
 
 
 # Hello Response
@@ -21,6 +13,9 @@ async def when_msg(message):
 async def on_message(message):
     if message.author == client.user:
         return
+    if message.content.startswith(prefix + "hello"):
+        msg = 'Hello {0.author.mention}'.format(message)
+        await message.channel.send(msg)
     if message.content.startswith("hello"):
         if str(message.author) == "Kyo#9355":
             await message.channel.send("Hello " + "<@352330857286991902>")
