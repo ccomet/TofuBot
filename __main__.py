@@ -6,13 +6,15 @@ from threading import Timer
 
 client = discord.Client()
 prefix = "?"
-@client.event
 
-async def talk(mes):
+
+@client.event
+async def when_msg(message):
     # we do not want the bot to reply to itself
-    if mes.content.startswith(prefix+"hello"):
-        msg = 'Hello {0.author.mention}'.format(mes)
+    if message.content.startswith(prefix + "hello"):
+        msg = 'Hello {0.author.mention}'.format(message)
         await message.channel.send(msg)
+
 
 # Hello Response
 @client.event
