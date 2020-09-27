@@ -27,7 +27,6 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.content.startswith("hello"):
-        await message.channel.send("Hello")
         if str(message.author) == "Kyo#9355":
             await message.channel.send("Hello " + "<@352330857286991902>")
         else:
