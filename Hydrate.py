@@ -6,7 +6,7 @@ client = discord.Client()
 prefix = "?"
 
 x = datetime.today()
-y = x.replace(day=x.day, hour=20, minute=6, second=30, microsecond=0)
+y = x.replace(day=x.day, hour=20, minute=7, second=30, microsecond=0)
 delta_t = y-x
 
 secs = delta_t.seconds+1
