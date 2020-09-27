@@ -10,8 +10,8 @@ prefix = "?"
 
 async def talk(mes):
     # we do not want the bot to reply to itself
-    if message.content.startswith(prefix+"hello"):
-        msg = 'Hello {0.author.mention}'.format(message)
+    if mes.content.startswith(prefix+"hello"):
+        msg = 'Hello {0.author.mention}'.format(mes)
         await message.channel.send(msg)
 
 # Hello Response
