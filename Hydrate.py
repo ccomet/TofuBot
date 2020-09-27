@@ -7,7 +7,7 @@ client = discord.Client()
 prefix = "?"
 
 x = datetime.today()
-y = x.replace(day=x.day, hour=20, minute=21, second=30, microsecond=0)
+y = x.replace(day=x.day, hour=20, minute=27, second=30, microsecond=0)
 delta_t = y - x
 
 secs = delta_t.seconds + 1
@@ -15,8 +15,8 @@ secs = delta_t.seconds + 1
 
 @client.event
 async def drink_water():
-    await message.channel.send("Time to drink water")
-
+    if (message.channel.id == '759472278261071934'):
+        await message.channel.send('Time to drink water')
 
 t = Timer(secs, drink_water)
 t.start()
