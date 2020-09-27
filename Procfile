@@ -1,2 +1,1 @@
-worker: python Talk.py
-worker: python Hydrate.py
+worker: python __main__.py
