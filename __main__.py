@@ -5,7 +5,7 @@ from datetime import datetime
 from threading import Timer
 
 client = discord.Client()
-prefix = "tofu "
+prefix = "t "
 
 
 # Hello Response
