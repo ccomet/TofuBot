@@ -18,6 +18,8 @@ async def on_message(message):
         await message.channel.send(msg)
     elif message.content.startswith(prefix + "ping"):
         await message.channel.send("pong")
+    elif msg.content.startswith(prefix + "i love you"):
+        await msg.channel.send("<@528299195325480960> loves you more")
 
 
 client.run(os.environ['DISCORD_TOKEN'])
