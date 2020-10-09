@@ -18,14 +18,6 @@ async def on_message(message):
         await message.channel.send(msg)
     elif message.content.startswith(prefix + "ping"):
         await message.channel.send("pong")
-    elif message.content.startswith(prefix + "i love you"):
-        await message.channel.send("<@528299195325480960> loves you more")
 
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
 
 client.run(os.environ['DISCORD_TOKEN'])
